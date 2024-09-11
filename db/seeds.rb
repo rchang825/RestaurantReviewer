@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Restaurant.create(name: "Sunflower Garden", location: "Somewhere Greenwood Ave, Seattle, WA 98133")
+Restaurant.create(name: "Banh Town", location: "Somewhere on Holman, Seattle, WA 98133")
+Restaurant.create(name: "La Cabana", location: "103rd St, Seattle, WA 98133")
+Restaurant.create(name: "Diva Espresso", location: "Holman probably, Seattle, WA 98133")
+Restaurant.create(name: "Lenny's Produce", location: "Next to Sunflower Garden, Seattle, WA 98133")
