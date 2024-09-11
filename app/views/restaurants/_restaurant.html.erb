@@ -3,4 +3,5 @@
     <%= restaurant.location %> <br />
     Rating: 
     <%= number_with_precision restaurant.reviews.average(:rating), :precision => 2 %> <br />
+    <%= link_to "Write a Review", new_restaurant_review_path(restaurant.id)%>
 </div>

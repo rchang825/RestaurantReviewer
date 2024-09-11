@@ -2,3 +2,5 @@
 <% @restaurant.reviews.each do |review| %>
     <%= render partial: "reviews/review", locals: {review: review}%>
 <% end %>
+<br />
+<%= link_to "Back to All Restaurants", root_path %>
