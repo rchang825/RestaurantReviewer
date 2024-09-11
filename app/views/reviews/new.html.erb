@@ -1,0 +1,9 @@
+<%= form_for [@restaurant, @review] do |form| %>
+    <%= form.label :rating %>
+    <%= form.number_field :rating %>
+    <%= form.label :summary %>
+    <%= form.text_field :summary%>
+    <%= form.hidden_field :reviewer_id, value: current_user.id %>
+    <%= form.hidden_field :reviewed_restaurant_id, value: params[:restaurant_id]%>
+    <%= form.submit %>
+<% end %>

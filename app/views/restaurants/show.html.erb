@@ -1,0 +1,4 @@
+<%= render partial: "restaurant", locals: {restaurant: @restaurant} %>
+<% @restaurant.reviews.each do |review| %>
+    <%= render partial: "reviews/review", locals: {review: review}%>
+<% end %>
