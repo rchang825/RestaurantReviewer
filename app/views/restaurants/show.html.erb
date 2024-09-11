@@ -1,6 +1,7 @@
-<%= render partial: "restaurant", locals: {restaurant: @restaurant} %>
+<%= render partial: "restaurant", locals: {restaurant: @restaurant} %> <br />
+<strong>Reviews</strong> <br />
 <% @restaurant.reviews.each do |review| %>
-    <%= render partial: "reviews/review", locals: {review: review}%>
+    <%= render partial: "reviews/review", locals: {review: review}%> <br />
 <% end %>
 <br />
 <%= link_to "Back to All Restaurants", root_path %>
