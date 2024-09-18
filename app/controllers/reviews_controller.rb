@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   def index
     @reviews = Review.all
+    @filter_by_options = ["best", "worst", "recent"]
   end
 
   def new

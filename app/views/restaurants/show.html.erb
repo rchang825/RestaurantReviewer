@@ -1,7 +1,15 @@
 <%= render partial: "restaurant", locals: {restaurant: @restaurant} %> <br />
 <strong>Reviews</strong> <br />
-<% @restaurant.reviews.each do |review| %>
+<%= form_with url: restaurant_path, method: :get do |form| %>
+    <%= form.label(:filter_by)%>
+    <%= form.select(:filter_by, @filter_by_options) %>
+    <%= form.submit "Sort", data: {turbo_frame: "reviews_for_restaurant_#{@restaurant.id}"}%>
+<% end %>
+<br />
+<turbo-frame id=<%="reviews_for_restaurant_#{@restaurant.id}"%>>
+<% @reviews.each do |review| %>
     <%= render partial: "reviews/review", locals: {review: review}%> <br />
 <% end %>
+</turbo-frame>
 <br />
 <%= link_to "Back to All Restaurants", root_path %>
